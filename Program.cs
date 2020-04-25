@@ -28,10 +28,6 @@ namespace DemoMultiThread
 
                 await clientA.Get();
 
-                var clientB = scope.Resolve<ITestClientA>();
-
-                await clientB.Get();
-
                 logTrace.Flush();
             }
 

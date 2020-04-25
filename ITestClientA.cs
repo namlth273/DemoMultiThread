@@ -26,6 +26,7 @@ namespace DemoMultiThread
         {
             _logTrace.Log("Getting...");
             await _requestBuilder().Build();
+            await _httpClient.SendAsync(new HttpRequestMessage(HttpMethod.Get, "/todos/1"));
             Console.WriteLine("Get... Received...");
             _logTrace.Log("Received...");
         }

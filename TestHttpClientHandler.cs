@@ -17,6 +17,7 @@ namespace DemoMultiThread
             CancellationToken cancellationToken)
         {
             _logTrace.Log("Inside HttpClientHandler...");
+            _logTrace.Flush();
             return base.SendAsync(request, cancellationToken);
         }
     }
